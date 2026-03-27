@@ -1,0 +1,75 @@
+Agenda :
+
+1. make the project (install and setup projects)
+2. make the different apps
+3. run the server (run manage.py)
+4. close the server
+
+---------------------------------------------
+           Commands Section
+---------------------------------------------
+
+Microsoft Windows [Version 10.0.22631.6199]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Lenovo\Desktop\Django\Django_Projects>pip install django
+Collecting django
+  Downloading django-6.0.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting asgiref>=3.9.1 (from django)
+  Downloading asgiref-3.11.1-py3-none-any.whl.metadata (9.3 kB)
+Collecting sqlparse>=0.5.0 (from django)
+  Downloading sqlparse-0.5.5-py3-none-any.whl.metadata (4.7 kB)
+Requirement already satisfied: tzdata in c:\users\lenovo\anaconda3\lib\site-packages (from django) (2025.2)
+Downloading django-6.0.3-py3-none-any.whl (8.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.4/8.4 MB 9.7 MB/s eta 0:00:00
+Downloading asgiref-3.11.1-py3-none-any.whl (24 kB)
+Downloading sqlparse-0.5.5-py3-none-any.whl (46 kB)
+Installing collected packages: sqlparse, asgiref, django
+Successfully installed asgiref-3.11.1 django-6.0.3 sqlparse-0.5.5
+
+C:\Users\Lenovo\Desktop\Django\Django_Projects>python
+Python 3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import django
+>>> django.VERSION
+(6, 0, 3, 'final', 0)
+>>> exit
+
+C:\Users\Lenovo\Desktop\Django\Django_Projects>django-admin startproject myproject
+
+C:\Users\Lenovo\Desktop\Django\Django_Projects>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 4E27-3CD2
+
+ Directory of C:\Users\Lenovo\Desktop\Django\Django_Projects
+
+03/27/2026  10:54 AM    <DIR>          .
+03/27/2026  10:04 AM    <DIR>          ..
+03/27/2026  10:54 AM    <DIR>          myproject
+               0 File(s)              0 bytes
+               3 Dir(s)  282,520,965,120 bytes free
+
+C:\Users\Lenovo\Desktop\Django\Django_Projects>cd myproject
+
+C:\Users\Lenovo\Desktop\Django\Django_Projects\myproject>python manage.py startapp myapp
+
+C:\Users\Lenovo\Desktop\Django\Django_Projects\myproject>python manage.py startapp myapp_demo
+
+C:\Users\Lenovo\Desktop\Django\Django_Projects\myproject>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+March 27, 2026 - 10:58:08
+Django version 6.0.3, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+[27/Mar/2026 10:58:14] "GET / HTTP/1.1" 200 12068
+Not Found: /favicon.ico
+[27/Mar/2026 10:58:15] "GET /favicon.ico HTTP/1.1" 404 2211
