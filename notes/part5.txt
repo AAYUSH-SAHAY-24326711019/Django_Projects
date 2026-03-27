@@ -1,0 +1,14 @@
+Agenda :
+
+1. use bootstrap to make the very responsive sites
+2. 2 folders for the static sites and templates for
+   the dynamic sites.
+3. open the settings . py
+4. give the path to the directory of the templates and the static
+5. go to the templates forlder.
+6. go to bootstrap site and get the starter templates in the index.html
+7. add a url in the urls
+8. define the function connected to it.
+9. run the function and check the url (success)
+10.ctrl+ u (see all the front end code)
+11. inspect to see the frontend responsiveness testing/ debugging.
