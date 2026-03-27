@@ -1,0 +1,38 @@
+Agenda:
+
+1. start environment
+2. mention the app name inside the settings.py
+    (inside the myfirstproject)
+3. make another urls file inside myfirst app
+4. include that inside the project urls
+5. add the code inside the app level urls
+   -> add the url patterns there
+6. go to the views. py and add the functions there.
+7. run the servers
+
+
+Main commands
+
+1. PS C:\Users\Lenovo\Desktop\Django\Django_Projects> cd .\myfirstproject\
+PS C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject> myenv\Scripts\activate
+
+7. (myenv) PS C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject> python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+March 27, 2026 - 16:18:30
+Django version 6.0.3, using settings 'myfirstproject.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+[27/Mar/2026 16:18:33] "GET / HTTP/1.1" 200 11
+Not Found: /favicon.ico
+[27/Mar/2026 16:18:34] "GET /favicon.ico HTTP/1.1" 404 2463
+(myenv) PS C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject> 
+
