@@ -1,0 +1,8 @@
+Agenda :
+
+1. send the parameters via the url
+   * the name in the url of the parameter and the views must match
+   * different variable names will lead to the errors.
+
+2. making the intro page using the json response.
+
