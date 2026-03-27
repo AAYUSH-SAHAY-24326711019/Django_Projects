@@ -1,0 +1,182 @@
+emphasis on making a venv (virtual environment)
+
+Agenda :
+
+1. make the environment
+2. activate the environment
+3. run the server on activated the environment and see the errors
+4. install the requirements on the virtual environment
+5. make the files of the requirements (what dependencies will be required with specifications)
+6. you will install the dependencies by pip install -r requirement.txt 
+    to share the dependencies utilized by your framework
+    keep track of all the dependencies in order to run on cloud
+
+* Look for the Main commands section , some errors are also resolved
+
+Ans 1.
+it helps on to run / deployment over the server.
+
+Ans 2.
+there are the list of pakages and dependencies
+so that they install on machine or server to
+run their application
+
+Ans 3.
+server of org. is secure.
+you need approval of engineer each time to install
+dependencies on the main python environment.
+So, its better to have a copy of python environment
+virtually and keep adding dependencies without any
+issue / delay. Also its seperate environment than
+of the main python environment of the server.
+
+PS C:\Users\Lenovo\Desktop\Django\Django_Projects> django-admin startproject myfirstproject
+PS C:\Users\Lenovo\Desktop\Django\Django_Projects> cd myfirstproject
+PS C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject> python manage.py startapp myfirstapp
+PS C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject> dir
+
+
+    Directory: C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         3/27/2026  11:12 AM                myfirstapp
+d-----         3/27/2026  11:12 AM                myfirstproject
+-a----         3/27/2026  11:11 AM            692 manage.py
+
+
+PS C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject> python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+March 27, 2026 - 11:35:49
+Django version 6.0.3, using settings 'myfirstproject.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+[27/Mar/2026 11:35:53] "GET / HTTP/1.1" 200 12068
+PS C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject> 
+
+-----------------------------------------------------
+            Main Commands Section
+-----------------------------------------------------
+
+
+PS C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject> pip install virtualenv
+Collecting virtualenv
+  Downloading virtualenv-21.2.0-py3-none-any.whl.metadata (3.5 kB)
+Collecting distlib<1,>=0.3.7 (from virtualenv)
+  Downloading distlib-0.4.0-py2.py3-none-any.whl.metadata (5.2 kB)
+Collecting filelock<4,>=3.24.2 (from virtualenv)
+  Downloading filelock-3.25.2-py3-none-any.whl.metadata (2.0 kB)
+Requirement already satisfied: platformdirs<5,>=3.9.1 in c:\users\lenovo\anaconda3\lib\site-packages (from virtualenv) (4.3.7)
+Collecting python-discovery>=1 (from virtualenv)
+  Downloading python_discovery-1.2.1-py3-none-any.whl.metadata (5.4 kB)
+Downloading virtualenv-21.2.0-py3-none-any.whl (5.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.8/5.8 MB 5.6 MB/s eta 0:00:00
+Downloading distlib-0.4.0-py2.py3-none-any.whl (469 kB)
+Downloading filelock-3.25.2-py3-none-any.whl (26 kB)
+Downloading python_discovery-1.2.1-py3-none-any.whl (31 kB)
+Installing collected packages: distlib, filelock, python-discovery, virtualenv
+  Attempting uninstall: filelock
+    Found existing installation: filelock 3.17.0
+    Uninstalling filelock-3.17.0:
+      Successfully uninstalled filelock-3.17.0
+Successfully installed distlib-0.4.0 filelock-3.25.2 python-discovery-1.2.1 virtualenv-21.2.0                                       
+PS C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject> 
+PS C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject> virtualenv myenv
+could not migrate app data from C:\Users\Lenovo\AppData\Local\pypa\virtualenv to C:\Users\Lenovo\AppData\Local\pypa\virtualenv\Cache: Error("Cannot move a directory 'C:\\Users\\Lenovo\\AppData\\Local\\pypa\\virtualenv' into itself 'C:\\Users\\Lenovo\\AppData\\Local\\pypa\\virtualenv\\Cache'."), using old location
+created virtual environment CPython3.13.5.final.0-64-x86_64 in 13070ms
+  creator CPython3Windows(dest=C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject\myenv, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=C:\Users\Lenovo\AppData\Local\pypa\virtualenv)
+    added seed packages: pip==26.0.1
+  activators BashActivator,BatchActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+PS C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject> 
+PS C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject>
+PS C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject> myenv\Scripts\activate
+myenv\Scripts\activate : File C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject\myenv\Scripts\activate.ps1 cannot be 
+loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at
+https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ myenv\Scripts\activate
++ ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+
+
+* fix of the problem is : open powershell as a normal user:
+PS C:\Users\Lenovo> Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+
+PS C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject> myenv\Scripts\activate
+(myenv) PS C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject> 
+
+* get the errors for the virtual environment
+
+(myenv) PS C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject> python manage.py runserver 
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject\manage.py", line 11, in main
+    from django.core.management import execute_from_command_line
+ModuleNotFoundError: No module named 'django'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject\manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject\manage.py", line 13, in main
+    raise ImportError(
+    ...<3 lines>...
+    ) from exc
+ImportError: Couldn't import Django. Are you sure it's installed and available on your PYTHONPATH environment variable? Did you forget to activate a virtual environment?
+
+* installing django on the virtual environment machine
+(myenv) PS C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject> pip install django
+Collecting django
+  Using cached django-6.0.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting asgiref>=3.9.1 (from django)
+  Using cached asgiref-3.11.1-py3-none-any.whl.metadata (9.3 kB)
+Collecting sqlparse>=0.5.0 (from django)
+  Using cached sqlparse-0.5.5-py3-none-any.whl.metadata (4.7 kB)
+Collecting tzdata (from django)
+  Downloading tzdata-2025.3-py2.py3-none-any.whl.metadata (1.4 kB)
+Using cached django-6.0.3-py3-none-any.whl (8.4 MB)
+Using cached asgiref-3.11.1-py3-none-any.whl (24 kB)
+Using cached sqlparse-0.5.5-py3-none-any.whl (46 kB)
+Downloading tzdata-2025.3-py2.py3-none-any.whl (348 kB)
+Installing collected packages: tzdata, sqlparse, asgiref, django
+Successfully installed asgiref-3.11.1 django-6.0.3 sqlparse-0.5.5 tzdata-2025.3
+
+* make the requirements files. and then run the server (success)
+
+(myenv) PS C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject> pip freeze > requirement.txt
+(myenv) PS C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject> python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+March 27, 2026 - 11:55:08
+Django version 6.0.3, using settings 'myfirstproject.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+[27/Mar/2026 11:55:12] "GET / HTTP/1.1" 200 12068
+(myenv) PS C:\Users\Lenovo\Desktop\Django\Django_Projects\myfirstproject> 
+
+
+
+
+
