@@ -1,0 +1,6 @@
+Agenda :
+
+1. make the url for the myimagepage2
+2. add the images there for the rows.
+3. then format the document , right click and select to format your document with
+   select prettier / html reformat tool.

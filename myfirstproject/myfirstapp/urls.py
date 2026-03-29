@@ -8,7 +8,8 @@ urlpatterns =[
     path('intro/<str:name>/<int:age>',views.intro,name="intro"),
     path('myfirstpage',views.myfirstpage,name="myfirstpage"),
     path('mythirdpage',views.mythirdpage,name="mythirdpage"),
-    path('myimagepage',views.myimagepage,name="myimagepage")
+    path('myimagepage',views.myimagepage,name="myimagepage"),
+    path('myimagepage2',views.myimagepage2,name="myimagepage2"),
 ]
 
 # part 4 
