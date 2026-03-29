@@ -1,0 +1,11 @@
+Agenda :
+
+1. We are starting to adding the images into the pages.
+2. go to settings.py and add a static url.
+3. you need to keep the images, css and the js files inside the static folder.
+4. make the url 
+5. make the view
+6. make the template.imagepage.html
+7. you will load the static image.
+8. go to the bootstrap , there is the images section.
+9. added the code to make the images very responsive.

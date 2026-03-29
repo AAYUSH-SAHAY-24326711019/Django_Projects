@@ -1,0 +1,20 @@
+{%extends 'index.html'%}
+{%load static%}
+{%block title%} My images {%endblock%}
+{%block content%}
+<h1>Welcome to My images :</h1>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md6">
+            <img src="{% static 'django.jpg' %}" class="img-fluid" alt="...">
+            <img src="{% static 'python.jpg' %}" class="img-fluid" alt="...">
+        </div>
+        
+        
+    </div>
+
+</div>
+
+{%endblock%}
