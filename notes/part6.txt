@@ -1,0 +1,13 @@
+Agenda :
+
+1.Add the url , and define a function as the mythirdpage
+2. make the second and third.html inside the templates folder
+3.  you will display the thing on the third page
+4. start the environment and then run the project there.
+    activate the environment :  .\myenv\Scripts\activate
+    run the server :  python manage.py runserver
+5. you may need to add something inside the index.html
+   (added and that worked.)
+
+6. show a list using for loop
+7. use the if and end if to show the output 

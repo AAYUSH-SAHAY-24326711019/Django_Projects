@@ -6,7 +6,8 @@ urlpatterns =[
     path('about',views.myfunctionabout,name="about"),
     path('add/<int:a>/<int:b>',views.add,name="add"),
     path('intro/<str:name>/<int:age>',views.intro,name="intro"),
-    path('myfirstpage',views.myfirstpage,name="myfirstpage")
+    path('myfirstpage',views.myfirstpage,name="myfirstpage"),
+    path('mythirdpage',views.mythirdpage,name="mythirdpage") 
 ]
 
 # part 4 

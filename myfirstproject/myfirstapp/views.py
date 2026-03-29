@@ -20,3 +20,22 @@ def intro(request,name,age):
 
 def myfirstpage(request):
     return render(request,"index.html")
+
+def mythirdpage(request):
+    var = "Hello World (new string)"
+    greeting = "Hello, How are you ? "
+    fruits = ['apple','mango','banana']
+
+    num1 , num2 = 13,5
+    ans =  num1>num2
+    
+
+    my_dict = {
+        "var" : var,
+        "msg" : greeting,
+        "myfruits" : fruits,
+        "num1":num1,
+        "num2":num2,
+        "ans":ans
+    }
+    return render(request,'third.html',context=my_dict)
