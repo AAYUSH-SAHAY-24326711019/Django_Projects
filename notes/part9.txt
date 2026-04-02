@@ -1,0 +1,15 @@
+Agenda
+1. make the myimagepage3 and 4.
+2. then go and define that in the views.
+3. bootstrap css trick. that md-6 or md-5 is the class.
+   and not mentioning it will maintain that structure
+   on all the device accordingly.
+   class will show the responsive behaviour but not will
+   lead to exact behaviour.
+
+   use the behaviour to make the responsive web templates.
+   Now.  make a page 5 url and it takes the imagename as a
+   parameter.
+
+4. main thing we are implimenting that you give the url 
+and the image will be displayed to you
