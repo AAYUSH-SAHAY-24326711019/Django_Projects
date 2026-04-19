@@ -1,0 +1,7 @@
+1. agenda:
+2. working with forms.
+3. for the user inputs.
+4. integration of frontend with the backend
+5. request,post methods.
+6. take the template and paste there inside myform.html
+7. add the form with the text area.
