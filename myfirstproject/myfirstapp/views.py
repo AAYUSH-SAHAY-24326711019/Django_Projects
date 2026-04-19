@@ -65,3 +65,11 @@ def myimagepage5(request,imagename):
 
 def myform(request):
     return render(request,'myform.html')
+
+def submitmyform(request):
+    mydictionary = {
+        "var1":request.POST['mytext'],
+        "var2":request.POST['mymsg'],
+        "method":request.method
+    }
+    return JsonResponse(mydictionary)
